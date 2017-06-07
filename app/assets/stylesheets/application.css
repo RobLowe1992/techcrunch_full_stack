@@ -1,0 +1,346 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+a {
+    color: white;
+}
+.article-left {
+    width: 75%;
+}
+.article-right {
+    width: 25%;
+}
+.bg-green {
+    background-color: #0f4a00;
+}
+hr {
+    color: #a5a5a5;
+}
+.container {
+    margin-top: 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 1330px;
+}
+#crunchboard {
+    background-color: white;
+    padding: 5px 15px;
+}
+.feat-pic img{
+    width: 33%;
+    height: 81px;
+}
+.feat-pic {
+    width: 100%;
+    font-size: 1em;
+}
+.feat-pic i {
+    font-style: italic;
+}
+.feat-pic div {
+    width: 100%;
+    font-size: 1.2em;
+    padding-left: 5px
+}
+
+fieldset label span {
+    color: #282e28;
+    margin-left: 5px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+fieldset p {
+    padding: 5px;
+    padding-top: 0;
+
+}
+.fontEM {
+    font-size: 1.4em;
+}
+.fontEM3 {
+    font-size: 1.3em;
+}
+.footer {
+    text-align: left;
+    width: 100%;
+}
+#footer-input {
+    width: 350px;
+    height: 40px;
+    font-size: 1em;
+}
+#footer-input-button {
+    background-color: #3e433e;
+    width: 40%;
+    float: right;
+    border-style: none;
+    min-height: 40px;
+    font-size: 1.1em;
+    color: white;
+    letter-spacing: .1em;
+}
+.green-arrow {
+    color: #089E00;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+#green-bigger {
+    font-size: 1.2em;
+    font-color: #089E00;
+}
+#crunchboard div {
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-width: 1px;
+}
+.headerList {
+    margin-left: -50px;
+    font-size: 1.5em;
+    font-color: #3e433e;
+}
+.headerList a {
+    color: #3e433e;
+}
+.headerLogo {
+    color: white;
+}
+#header-social li a{
+    background-color: #a5a5a5;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0;
+    padding-top: 6px;
+
+}
+.height-50 {
+    max-height: 49%;
+    margin-left: 80px;
+}
+.inline {
+    display: inline;
+}
+.inlineList li {
+    display: inline;
+    margin: 1px;
+}
+#left-main {
+    margin-top:15px;
+    padding-right: 0;
+    width: 66%;
+    float: left;
+}
+.margin-10 {
+    margin: 10px 0;
+}
+#main {
+    width: 1330px;
+}
+.message-us {
+    background-color: #3E433E;
+    color: white;
+    height: 39px;
+}
+#mid-main {
+    padding-top: 5px;
+    padding-left: 0;
+    margin-top: 13px;
+    width: 34%;
+    float: right;
+}
+#mid-main h2 {
+    text-align: left;
+}
+#nb1 {
+    font-weight: bold;
+ }
+ #nb3 {
+    font-weight: bold;
+ }
+ #news-text {
+    font-size: 18px;
+    width: 292px;
+    height: 49px;
+    text-align: center;
+    padding-top: 12px;
+    margin-bottom: 0;
+ }
+ #newsletter {
+    color: #282e28;
+ }
+#note-bar {
+    margin-top: 15px;
+    text-align: center;
+    width: 1330px;
+    margin-bottom: -20px;
+}
+.row {
+    max-width: 1330px;
+}
+.search-bar input {
+    height: 41px;
+}
+#sidebar-head {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #a5a5a5;
+    width: 292px;
+    font-size: 1.5625em;
+    font-color: #686c68;
+    margin: 20px 0;
+    text-align: center;
+}
+#sidebar-head a {
+    color: #686c68;
+}
+#sidebar-shop {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #a5a5a5;
+    width: 292px;
+    font-size: 1.5625em;
+    font-color: #686c68;
+    margin: 20px 0;
+}
+#sidebar-shop p{
+    color: #686c68;
+    padding: 5px;
+    text-align: center;
+}
+.sidebar-dimensions {
+    width: 292px;
+    height: 77px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a5a5a5;
+    padding: 5px;
+}
+#sidebar-input {
+    width: 201px;
+    margin-right: 0;
+    height: 25px;
+}
+#sidebar-submit {
+    margin-left: -5px;
+    width: 93px;
+}
+#sidebar-subs {
+    margin-top: 10px;
+}
+.socialList {
+    float: right;
+}
+.socialList li {
+    display: inline;
+}
+.tcGreen {
+    color: #089E00;
+}
+.tcGray {
+    color: #a5a5a5;
+}
+.list-style li{
+    display: inline;
+    font-color: white;
+    background-color: #343B35;
+    font-size: 1em;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 5px;
+    margin: 5px;
+}
+#video {
+    width: 600px;
+    height: 374px;
+}
+
+.white-text {
+    color: white;
+}
+.width-50 {
+    max-width: 50%;
+}
+body {
+    font-family: sans-serif;
+    padding: 0;
+}
+button {
+    font-style: normal;
+    border-style: none;
+}
+.dark-grey {
+    background-color: #282e28;
+}
+.dark-grey-font {
+    font-color: #282e28;
+}
+.dark-grey-text {
+    color: #282e28;
+    font-size: 1.8em;
+}
+.dark-grey-text-upper {
+    color: #282e28;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding-top: 7px;
+}
+em {
+    font-size: 1.2em
+}
+header .headerList li {
+    display: inline;
+    margin: 10px;
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    width: 1315px;
+}
+footer ::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+footer li a {
+    color: #a5a5a5;
+}
+footer li  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+i {
+    color: #a5a5a5;
+    font-style: normal;
+}
+span {
+    color: white
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+::-webkit-input-placeholder {
+    color: #089E00;
+}
+#crunchboard div a {
+    color: #686c68;
+}
+
+#crunchboard div {
+    margin: 10px 0;
+    border-bottom: none;
+    font-size: 1.2em
+}

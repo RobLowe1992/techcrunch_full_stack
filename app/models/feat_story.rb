@@ -1,0 +1,2 @@
+class FeatStory < ApplicationRecord
+end

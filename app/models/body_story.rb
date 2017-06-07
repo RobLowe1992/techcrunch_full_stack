@@ -1,0 +1,2 @@
+class BodyStory < ApplicationRecord
+end
