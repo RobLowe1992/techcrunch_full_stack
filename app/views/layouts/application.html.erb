@@ -6,9 +6,72 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/app/assets/fonts/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="/app/assets/fonts/font-awesome.css">
   </head>
 
   <body>
+    <div class="container">
+        <div class="row">
+            <header>
+                <div>
+                    <a class="col-md-2" href="https://www.techcrunch.com">
+                        <%= image_tag "logo.svg" %>
+                    </a>
+                    <div class="col-md-10" style="display: block;">
+                        <div class="height-50" style="margin-bottom: 25px;">
+                            <div class="socialList width-50 fontEM tcGray">
+                                <ul id="header-social">Follow Us
+                                    <li><a href="https://www.facebook.com/techcrunch" class="fa fa-facebook"></a></li>
+                                    <li><a href="https://www.instagram.com/techcrunch/" class="fa fa-instagram"></a></li>
+                                    <li><a href="https://twitter.com/techcrunch" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.youtube.com/user/techcrunch" class="fa fa-youtube"></a></li>
+                                    <li><a href="https://www.pinterest.com/techcrunch/" class="fa fa-pinterest"></a></li>
+                                    <li><a href="https://www.linkedin.com/company/techcrunch" class="fa fa-linkedin"></a></li>
+                                    <li><a href="https://plus.google.com/+TechCrunch" class="fa fa-google-plus"></a></li>
+                                    <li><a href="https://techcrunch.com/rssfeeds/" class="fa fa-rss"></a></li>
+                                </ul>
+                            </div>
+                            <div class="width-50">
+                                <a href="https://techcrunch.com/got-a-tip/">
+                                    <span class="tcGray fontEM">Got a tip?</span>
+                                    <span class="tcGreen fontEM"> Let us know.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="height-50">
+                            <div class="width-50 search-bar" style="float: right;">
+                                <button class="message-us" style="width: 140px">Message Us</button>
+                                <input type="input" name="search" placeholder="Search" class="fontEM" style="width: 252px">
+                            </div>
+                            <div class="width-50">
+                                <ul class="headerList">
+                                    <li><a href="https://techcrunch.com/">News</a></li>
+                                    <li><a href="https://techcrunch.com/video/">Video</a></li>
+                                    <li><a href="https://techcrunch.com/events/">Events</a></li>
+                                    <li><a href="https://www.crunchbase.com/#/home/index">Crunchbase</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="note-bar" class="row bg-green">
+                <p>
+                    <span id="nb1" class="fontEM"></span>
+                    <span id="nb2"></span>
+                    <span id="nb3" class="fontEM"></span>
+                </p>
+        </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/1bc86196f7.js"></script>
   </body>
 </html>
