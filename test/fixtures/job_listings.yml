@@ -3,7 +3,11 @@
 one:
   url: MyString
   listing: MyString
+  location: MyString
+  date: 2017-06-09
 
 two:
   url: MyString
   listing: MyString
+  location: MyString
+  date: 2017-06-09

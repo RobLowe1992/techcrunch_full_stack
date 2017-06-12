@@ -31,11 +31,9 @@ hr {
     color: #a5a5a5;
 }
 .container {
-    margin-top: 16px;
-    margin-left: 50px;
-    margin-right: 50px;
-    max-width: 1330px;
+    margin: 16px auto;
 }
+
 #crunchboard {
     background-color: white;
     padding: 5px 15px;
@@ -121,14 +119,24 @@ fieldset p {
     color: white;
 }
 #header-social li a{
-    background-color: #a5a5a5;
+    background-color: #ECECEC;
+    color: #969996;
     width: 30px;
     height: 30px;
     text-align: center;
     margin: 0;
     padding-top: 6px;
-
 }
+#header-social li a:hover {
+    text-decoration: none;
+}
+#header-social li a:hover:nth-of-type(1) {
+    background-color: #4267b2;
+}
+#header-social li a:hover:nth-of-type(2) {
+    background-color: red;
+}
+
 .height-50 {
     max-height: 49%;
     margin-left: 80px;
@@ -187,7 +195,6 @@ fieldset p {
 #note-bar {
     margin-top: 15px;
     text-align: center;
-    width: 1330px;
     margin-bottom: -20px;
 }
 .row {
@@ -308,9 +315,10 @@ header .headerList li {
     margin: 10px;
 }
 footer {
+    margin: 40px auto 0 auto;
     text-align: center;
-    padding: 5px;
-    width: 1315px;
+    padding: 20px 65px;
+    padding: auto
 }
 footer ::-webkit-input-placeholder {
     color: #a5a5a5;
@@ -345,3 +353,32 @@ ul {
     border-bottom: none;
     font-size: 1.2em
 }
+.log-in {
+    font-size: 12px;
+}
+.log-in:hover {
+    text-decoration: none;
+    font-weight: 700;
+}
+p.notice {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+p.alert {
+    margin-bottom: 0;
+}
+.devise-head {
+    margin-top: 0;
+}
+.submit {
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .search-bar {
+        display: none;
+    }
+}
+
+

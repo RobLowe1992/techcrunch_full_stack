@@ -14,9 +14,9 @@
 //= require turbolinks
 //= require_tree .
 
-var $nb1 = document.getElementById('nb1');
-var $nb2 = document.getElementById('nb2');
-var $nb3 = document.getElementById('nb3');
+var $nb1 = $('#nb1');
+var $nb2 = $('#nb2');
+var $nb3 = $('#nb3');
 var $noteBar = $('.note-bar');
 $nb1.textContent = 'TC TRIVIA THROWDOWN';
 $nb2.textContent = " We're Hosting A Trivia Night in NYC on April 6 ";
