@@ -189,7 +189,7 @@ $.getJSON('https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKe
     latest = data;
 
     for (let i = 0; i < 10; i++) {
-        $('#body-stories').append(`<div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;"><img src="${data.articles[i].urlToImage}" align="right" style="width: 210px; height: 158px; padding:15px"><a class="dark-grey-font" style="color: #282e28" href="${data.articles[i].url}"><h2 class="dark-grey-font">${data.articles[i].title}</h2></a><h4><em class="tcGray">by </em><em class="tcGreen">${data.articles[i].author}</em></h4><p class="article-paragraph">${data.articles[i].description}<a class="tcGreen" href="${data.articles[i].url}">Read More</a></p></div>`);
+        $('#body-stories').append(`<div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;"><a href="${data.articles[i].url}"><img src="${data.articles[i].urlToImage}" align="right" style="width: 210px; height: 158px; padding:15px"></a><a class="dark-grey-font" style="color: #282e28" href="${data.articles[i].url}"><h2 class="dark-grey-font">${data.articles[i].title}</h2></a><h4><em class="tcGray">by </em><em class="tcGreen">${data.articles[i].author}</em></h4><p class="article-paragraph">${data.articles[i].description}<a class="tcGreen" href="${data.articles[i].url}">Read More</a></p></div>`);
     }
 });
 
