@@ -1,2 +1,83 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row" id="main">
+            <div class="col-md-9">
+                <div id="left-main" class="left-main">
+                    <p class="dark-grey-text-upper">Watch <i id="green-bigger" class="tcGreen">Bullish</i></p>
+                    <div>
+                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/dFRryOmZ0A8" frameborder="0" allowfullscreen></iframe>
+                        <div>
+                            <em class="tcGray">Bullish​ is TechCrunch's premiere talk show about tech, startups and diversity.</em>
+                        </div>
+                    </div>
+                </div>
+                <div id="mid-main" class="mid-main">
+                    <h2 class="dark-grey-text">Featured Stories</h2>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div id="body-stories" class="body-stories">
+                </div>
+            </div>
+            <div class="col-md-3 right-main" style="background-color: #f9f9f9; margin-top: 20px; padding-bottom: 20px">
+                <div class="sidebar-head">
+                    <a href="https://techcrunch.com/got-a-tip/">Have a tip, pitch, or guest column? <span class="tcGreen">Send us a tip.</span></a>
+                </div>
+                <div class="sidebar-content">
+                    <p id="news-text" class="bg-green white-text news-text">NEWSLETTER SUBSCRIPTIONS</p>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>The Daily Crunch</span>
+                            </label>
+                            <p class="tcGray">Get the top tech stories of the day delivered to your inbox</p>
+                        </fieldset>
+                    </div>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>TC Weekly Roundup</span>
+                            </label>
+                            <p class="tcGray">Get a weekly recap of the biggest tech stories</p>
+                        </fieldset>
+                    </div>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>Crunchbase Daily</span>
+                            </label>
+                            <p class="tcGray">The latest startup funding announcements</p>
+                        </fieldset>
+                    </div>
+                    <div id="sidebar-subs" class="sidebar-subs">
+                        <%= form_for @email, url: home_index_path, method: :post do |f| %>
+                            <%= f.text_field :email, placeholder: 'Enter Email Address', class: 'tcGray sidebar-input', id: 'sidebar-input'  %>
+                            <%= f.submit id: 'sidebar-input', value: 'SUBSCRIBE', class: 'inline sidebar-submit' %>
+                        <% end %>
+                    </div>
+                    <div class="text-center">
+                        <a href="http://link.techcrunch.com/join/134/signup-all-newsletters&hash=e2426df9e6d563a11dc2f37bff61e253" id="newsletter">SEE ALL NEWSLETTERS
+                            <i class="green-arrow fa fa-angle-right" aria-hidden="true"></i>
+                            <i class="green-arrow fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="sidebar-shop" class="sidebar-shop">
+                    <a href="https://techcrunchstore.com/">
+                        <p>Want some TechCrunch gear? <span class="tcGreen">Shop here.</span></p>
+                    </a>
+                </div>
+                <div id="crunchboard">
+                    <h3 class="dark-grey-text">CrunchBoard</h3>
+                    <h4>Job Listings</h4>
+                </div>
+            </div>
+        </div>

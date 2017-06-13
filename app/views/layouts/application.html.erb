@@ -224,8 +224,10 @@
                     <h3 class="tcGray text-left">Subscribe to The Daily Crunch</h3>
                     <p class="white-text text-left" style="font-size: 1.2em">Latest headlines delivered to you daily</p>
                     <div>
-                        <input id="footer-input" class="tcGray" placeholder="Enter Email Address" type="text" name="footer-input" style="width: 60%">
-                        <input id="footer-input-button" type="submit" name="footer-submit" value="SUBSCRIBE" class="inline">
+                        <%= form_for @email, url: home_index_path, method: :post do |f| %>
+                            <%= f.text_field :email, placeholder: 'Enter Email Address', class: 'tcGray footer-input', id: 'footer-input', name: 'footer-input' %>
+                            <%= f.submit id: 'footer-input-button', value: 'SUBSCRIBE', class: 'inline footer-submit', name: 'footer-submit' %>
+                        <% end %>
                     </div>
                 </div>
             </div>

@@ -54,3 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~>4.3'
 gem "font-awesome-rails"
+gem 'httparty', '~> 0.15.5'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'

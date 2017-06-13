@@ -34,6 +34,11 @@ hr {
     margin: 16px auto;
 }
 
+div.container {
+    padding: 0;
+    position: relative;
+}
+
 #crunchboard {
     background-color: white;
     padding: 5px 15px;
@@ -76,21 +81,7 @@ fieldset p {
     text-align: left;
     width: 100%;
 }
-#footer-input {
-    width: 350px;
-    height: 40px;
-    font-size: 1em;
-}
-#footer-input-button {
-    background-color: #3e433e;
-    width: 40%;
-    float: right;
-    border-style: none;
-    min-height: 40px;
-    font-size: 1.1em;
-    color: white;
-    letter-spacing: .1em;
-}
+
 .green-arrow {
     color: #089E00;
     font-weight: bold;
@@ -157,9 +148,6 @@ fieldset p {
 .margin-10 {
     margin: 10px 0;
 }
-#main {
-    width: 1330px;
-}
 .message-us {
     background-color: #3E433E;
     color: white;
@@ -203,33 +191,6 @@ fieldset p {
 .search-bar input {
     height: 41px;
 }
-#sidebar-head {
-    border-top: solid;
-    border-bottom: solid;
-    border-color: #a5a5a5;
-    width: 292px;
-    font-size: 1.5625em;
-    font-color: #686c68;
-    margin: 20px 0;
-    text-align: center;
-}
-#sidebar-head a {
-    color: #686c68;
-}
-#sidebar-shop {
-    border-top: solid;
-    border-bottom: solid;
-    border-color: #a5a5a5;
-    width: 292px;
-    font-size: 1.5625em;
-    font-color: #686c68;
-    margin: 20px 0;
-}
-#sidebar-shop p{
-    color: #686c68;
-    padding: 5px;
-    text-align: center;
-}
 .sidebar-dimensions {
     width: 292px;
     height: 77px;
@@ -237,18 +198,6 @@ fieldset p {
     border-width: 1px;
     border-color: #a5a5a5;
     padding: 5px;
-}
-#sidebar-input {
-    width: 201px;
-    margin-right: 0;
-    height: 25px;
-}
-#sidebar-submit {
-    margin-left: -5px;
-    width: 93px;
-}
-#sidebar-subs {
-    margin-top: 10px;
 }
 .socialList {
     float: right;
@@ -373,7 +322,24 @@ p.alert {
 .submit {
     margin-top: 10px;
 }
-
+.footer-input {
+    width: 60%;
+    height: 40px;
+    font-size: 1em;
+}
+.footer-submit {
+    background-color: #3e433e;
+    width: 40%;
+    float: right;
+    border-style: none;
+    min-height: 40px;
+    font-size: 1.1em;
+    color: white;
+    letter-spacing: .1em;
+}
+.body-stories {
+    float: left;
+}
 
 @media only screen and (max-width: 1200px) {
     .search-bar {

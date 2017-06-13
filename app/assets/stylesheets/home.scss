@@ -1,3 +1,140 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main {
+    margin: 0 auto;
+    position: relative;
+
+    .col-md-9 {
+        padding: 0;
+    }
+
+    .left-main {
+        position: relative;
+        left: -15px;
+    }
+
+    .mid-main {
+        position: relative;
+        left: 10px;
+
+        hr {
+            position: relative;
+            top: -10px;
+        }
+
+        h2 {
+            text-align: center;
+            top: -6px;
+            font-weight: normal;
+        }
+
+        div.mid-main {
+            margin: 10px;
+        }
+
+        .news-text {
+            position: relative;
+            top: 9px;
+        }
+    }
+
+    .body-stories {
+            position: relative;
+            left: -15px;
+
+            .article-entry {
+                border-bottom: solid;
+                border-color: #282e28;
+                border-width: 1px;
+                margin-bottom: 10px;
+                clear: both;
+                padding: 5px;
+
+                img {
+                    float: right;
+                }
+
+                .dark-grey-font {
+                    text-decoration: none;
+                    opacity: 0.75;
+                }
+                .dark-grey-font:hover {
+                    opacity: 1;
+                }
+
+                p a.tcGreen {
+                    text-decoration: none;
+                }
+                p a.tcGreen:hover {
+                    font-weight: 700
+                }
+            }
+    }
+
+    .right-main {
+        position: relative;
+        right: -15px;
+        top: -62px;
+
+        .sidebar-head {
+            border-top: solid;
+            border-bottom: solid;
+            border-color: #a5a5a5;
+            width: 292.5px;
+            font-size: 1.5625em;
+            font-color: #686c68;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            left: -15px;
+
+            a {
+                color: #686c68;
+            }
+        }
+
+        .sidebar-content {
+            position: relative;
+            left: -15px;
+            top: 9px;
+
+            .sidebar-subs {
+                margin-top: 10px;
+                width: 292.5px;
+
+                .sidebar-input {
+                    width: 66%;
+                    margin-right: 0;
+                    height: 25px;
+                }
+                .sidebar-submit {
+                    margin-left: -5px;
+                    width: 34%;
+                }
+            }
+
+            .text-center {
+                width: 292.5px;
+            }
+        }
+
+        .sidebar-shop {
+            position: relative;
+            left: -15px;
+            border-top: solid;
+            border-bottom: solid;
+            border-color: #a5a5a5;
+            width: 292px;
+            font-size: 1.5625em;
+            font-color: #686c68;
+            margin: 20px 0;
+            text-align: center;
+
+            a {
+                color: #686c68;
+            }
+        }
+    }
+}
