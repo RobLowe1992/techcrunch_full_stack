@@ -2,7 +2,7 @@
 
 <h1 class="vid-head">Disrupts</h1>
 
-<%= @disrupts.each do | disrupt |%>
+<% @disrupts.each do | disrupt |%>
 <div class="vid-container">
     <div class="vids col-md-12">
         <iframe id="video" width="800" src="<%= disrupt.link %>" frameborder="0" allowfullscreen></iframe>
@@ -13,4 +13,3 @@
 </div>
 <% end %>
 
-<%= link_to 'New Disrupt', new_disrupt_path %>

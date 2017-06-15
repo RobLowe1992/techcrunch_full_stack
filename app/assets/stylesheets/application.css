@@ -110,6 +110,9 @@ fieldset p {
 .headerList a {
     color: #3e433e;
 }
+.headerList li a:hover {
+    color: #089E00;
+}
 .headerLogo {
     color: white;
 }
@@ -442,6 +445,13 @@ p.alert {
 }
 .show-text {
     margin-top: 20px;
+}
+.block-style {
+    display: block;
+}
+.block-style-last {
+    width: 500px;
+    height: 500px;
 }
 
 

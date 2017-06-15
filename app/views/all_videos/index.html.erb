@@ -2,7 +2,7 @@
 
 <h1>All Videos</h1>
 
-<%= @all_videos.each do | video |%>
+<% @all_videos.each do | video |%>
 <div class="vid-container">
     <div class="vids col-md-12">
         <iframe id="video" width="800" src="<%= video.link %>" frameborder="0" allowfullscreen></iframe>

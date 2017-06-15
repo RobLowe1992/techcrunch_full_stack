@@ -7,4 +7,11 @@ class HomeController < ApplicationController
     @listings = JobListing.all
   end
 
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+
+    redirect_to stories_path
+  end
+
 end

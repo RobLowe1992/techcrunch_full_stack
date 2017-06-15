@@ -28,7 +28,7 @@ class AllVideosController < ApplicationController
   def create
     @video = Video.create(all_video_params)
 
-    redirect_to all_video_path(@video)
+    redirect_to all_videos_path
   end
 
   # PATCH/PUT /all_videos/1
@@ -49,10 +49,7 @@ class AllVideosController < ApplicationController
   # DELETE /all_videos/1.json
   def destroy
     @all_video.destroy
-    respond_to do |format|
-      format.html { redirect_to all_videos_url, notice: 'All video was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
   end
 
   private

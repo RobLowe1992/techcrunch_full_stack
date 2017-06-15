@@ -28,17 +28,9 @@ class SocialsController < ApplicationController
   # POST /socials
   # POST /socials.json
   def create
-    @social = Social.new(social_params)
+    @social = Story.create(social_params)
 
-    respond_to do |format|
-      if @social.save
-        format.html { redirect_to @social, notice: 'Social was successfully created.' }
-        format.json { render :show, status: :created, location: @social }
-      else
-        format.html { render :new }
-        format.json { render json: @social.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to social_path(@social)
   end
 
   # PATCH/PUT /socials/1
@@ -58,11 +50,6 @@ class SocialsController < ApplicationController
   # DELETE /socials/1
   # DELETE /socials/1.json
   def destroy
-    @social.destroy
-    respond_to do |format|
-      format.html { redirect_to socials_url, notice: 'Social was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
@@ -73,6 +60,6 @@ class SocialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def social_params
-      params.require(:social).permit(:title, :author, :category, :body, :img, :description)
+      params.require(:story).permit(:title, :author, :category, :body, :img, :description)
     end
 end

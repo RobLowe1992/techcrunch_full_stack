@@ -1,6 +1,6 @@
 <h1>Editing Startup</h1>
 
-<%= form_for @startup do |f| %>
+<%= form_for @startup, :url => url_for(:controller => 'startups', :action => 'update') do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
 <%= f.label :author %>
@@ -16,5 +16,5 @@
 <%= f.submit %>
 <% end %>
 
-<%= link_to 'Show', @startup %> |
+<%= link_to 'Show', startup(@startup) %> |
 <%= link_to 'Back', startups_path %>

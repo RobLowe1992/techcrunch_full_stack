@@ -61,26 +61,36 @@
                             </div>
                             <div class="width-50">
                                 <ul class="headerList">
-                                    <li>
-                                        <span class='menu'>News</span><i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        <div class="drop-down" id="drop-down-1">
-                                            <%= link_to 'Startups', startups_path %>
-                                            <%= link_to 'Mobile',  mobiles_path %>
-                                            <%= link_to 'Social', socials_path %>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="menu">Video</span><i class="fa fa-caret-down" aria-hidden="true"></i>
-                                        <div class="drop-down" id="drop-down-2">
-                                            <%= link_to 'Bullish', '#' %>
-                                            <%= link_to 'Crunch Report',  '#' %>
-                                            <%= link_to 'Disrupt NY 2017', '#' %>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <%= link_to 'Crunchbase', 'https://www.crunchbase.com/#/home/index' %>
-                                    </li>
-                                    <li>
+                                    <div>
+                                   <li>
+                            <%= link_to 'News', root_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Mobile', mobiles_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Social', socials_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Startup', startups_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Posts', posts_path %>
+                        </li>
+                        </div>
+                        <li>
+                            <%= link_to 'Videos', all_videos_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Bullish', bullishes_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Crunch Report', crunch_reports_path %>
+                        </li>
+                        <li>
+                            <%= link_to 'Disrupt 2017', disrupts_path  %>
+                        </li>
+                        <li>
                                         <% if !current_user %>
                                             <%= link_to "Sign Up", new_user_registration_path, :class => 'log-in' %>
                                             <%= link_to "Sign In", new_user_session_path, :class => 'log-in' %>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :all_videos
-  resources :crunch_reports
-  resources :disrupts
-  resources :bullishes
+  resources :crunch_reports, only: [:index]
+  resources :disrupts, only: [:index]
+  resources :bullishes, only: [:index]
   resources :socials
   resources :mobiles
   resources :startups
@@ -10,8 +11,11 @@ Rails.application.routes.draw do
     resources :comments
   end
   devise_for :users
-  root 'home#index'
 
+
+  resources :home, only: [:destroy]
+
+    root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   post 'home/index', to: 'home#create'

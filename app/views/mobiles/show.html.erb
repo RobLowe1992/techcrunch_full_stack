@@ -2,9 +2,10 @@
 <div class="show-image">
     <h1><%= @mobile.title  %></h1>
     <h2 class="tcGreen">by <%= @mobile.author %></h2>
-    <%= image_tag @mobile.img, width: '700px'%>
+    <%= image_tag @mobile.img, width: '700px' %>
     <p class="show-text"><%= @mobile.body %></p>
 
 </div>
 <%= link_to 'Edit', edit_mobile_path(@mobile) %> |
-<%= link_to 'Back', mobiles_path %>
+<%= link_to 'Back', mobiles_path %> |
+<%= link_to 'Delete', home_path(@story), :url => url_for(:controller => 'home', :action => 'destroy') , :method => :delete   %>

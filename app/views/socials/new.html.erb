@@ -1,6 +1,6 @@
 <h1>New Social</h1>
 
-<%= form_for @social do |f| %>
+<%= form_for @social, :url => url_for(:controller => 'socials', :action => 'create') do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
 <%= f.label :author %>

@@ -25,10 +25,9 @@ class StartupsController < ApplicationController
   # POST /startups
   # POST /startups.json
   def create
-    @startup = Story.new(startup_params)
-    @email = Email.create(email_params)
+    @startup = Story.create(startup_params)
 
-    redirect_to startups_path
+    redirect_to startup_path(@startup)
   end
 
   # PATCH/PUT /startups/1
@@ -48,11 +47,6 @@ class StartupsController < ApplicationController
   # DELETE /startups/1
   # DELETE /startups/1.json
   def destroy
-    @startup.destroy
-    respond_to do |format|
-      format.html { redirect_to startups_url, notice: 'Startup was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
@@ -67,6 +61,6 @@ class StartupsController < ApplicationController
     end
 
     def startups_params
-      params.require(:social).permit(:title, :author, :category, :body, :img, :description)
+      params.require(:story).permit(:title, :author, :category, :body, :img, :description)
     end
 end

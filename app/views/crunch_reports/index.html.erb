@@ -2,7 +2,7 @@
 
 <h1 class="vid-head">Crunch Reports</h1>
 
-<%= @crunch_reports.each do | cr |%>
+<% @crunch_reports.each do | cr |%>
 <div class="vid-container">
     <div class="vids col-md-12">
         <iframe id="video" width="800" src="<%= cr.link %>" frameborder="0" allowfullscreen></iframe>
@@ -13,4 +13,3 @@
 </div>
 <% end %>
 
-<%= link_to 'New Crunch Report', new_crunch_report_path %>
