@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post = Post.find(params[:id])
   end
 
   # POST /posts
@@ -40,7 +41,10 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
 
+    redirect_to post_path(@post)
   end
 
   # DELETE /posts/1

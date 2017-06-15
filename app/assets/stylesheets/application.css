@@ -21,6 +21,11 @@ a {
 .article-left {
     width: 75%;
 }
+
+.article-entry img{
+    position: relative;
+    top: -20px;
+}
 .article-right {
     width: 25%;
 }
