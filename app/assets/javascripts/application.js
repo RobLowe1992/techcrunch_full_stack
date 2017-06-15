@@ -11,8 +11,11 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
+
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
 
 // var $nb1 = $('#nb1');
 // var $nb2 = $('#nb2');
