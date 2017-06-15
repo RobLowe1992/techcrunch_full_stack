@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a mock build of the website tech crunch.
 
-Things you may want to cover:
+It is used to brow tech articles, videos , as well as allowing users to post with each other
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project features ruby, rails, javascript, jquery, and css

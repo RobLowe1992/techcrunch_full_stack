@@ -204,14 +204,5 @@ $.getJSON('https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=1
     }
 });
 
-function dropDown() {
-    const id = $(this).attr('id');
-    console.log(id)
-    $(`#${id}`).toggle('.show')
-}
-
-$dropDown = $('.menu');
-
-$dropDown.click(dropDown);
 
 
