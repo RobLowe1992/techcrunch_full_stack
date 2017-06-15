@@ -1,0 +1,8 @@
+class CreateSocials < ActiveRecord::Migration[5.1]
+  def change
+    create_table :socials do |t|
+
+      t.timestamps
+    end
+  end
+end

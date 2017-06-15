@@ -1,21 +1,18 @@
-<div class="row" id="main">
+        <div class="row" id="main">
             <div class="col-md-9">
                 <div id="left-main" class="left-main">
-                    <p class="dark-grey-text-upper">Watch <i id="green-bigger" class="tcGreen">Bullish</i></p>
+                    <p class="dark-grey-text-upper">Watch <i id="green-bigger" class="tcGreen"><%= @video.channel %></i></p>
                     <div>
-                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/dFRryOmZ0A8" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="video" width="560" height="315" src="<%= @video.link %>" frameborder="0" allowfullscreen></iframe>
                         <div>
-                            <em class="tcGray">Bullish​ is TechCrunch's premiere talk show about tech, startups and diversity.</em>
+                            <em class="tcGray"><%= @video.description %></em>
                         </div>
                     </div>
                 </div>
                 <div id="mid-main" class="mid-main">
-                    <h2 class="dark-grey-text">Featured Stories</h2>
-                    <div>
-                        <hr>
-                    </div>
+                    <h2 class="dark-grey-text ft-stories">Featured Stories</h2>
                 </div>
-                <div id="body-stories" class="body-stories">
+                <div id="body-stories-n" class="body-stories">
                 </div>
             </div>
             <div class="col-md-3 right-main" style="background-color: #f9f9f9; margin-top: 20px; padding-bottom: 20px">
@@ -78,6 +75,12 @@
                 <div id="crunchboard">
                     <h3 class="dark-grey-text">CrunchBoard</h3>
                     <h4>Job Listings</h4>
+                    <% @listings.each do | listing | %>
+                        <div>
+                            <a href="<%= listing.url %>"><%= listing.listing %> (<%= listing.location %>)</a>
+                        </div>
+                    <% end %>
                 </div>
             </div>
         </div>
+        <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>

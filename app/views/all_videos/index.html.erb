@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Videos</h1>
+
+<%= @all_videos.each do | video |%>
+<div class="vid-container">
+    <div class="vids col-md-12">
+        <iframe id="video" width="800" src="<%= video.link %>" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <em class="tcGray"><%= video.description %></em>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<%= link_to 'New All Video', new_all_video_path %>

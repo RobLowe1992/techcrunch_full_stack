@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show-image">
+    <h1><%= @social.title  %></h1>
+    <h2 class="tcGreen">by <%= @social.author %></h2>
+    <%= image_tag @social.img, width: '700px'%>
+    <p class="show-text"><%= @social.body %></p>
+
+</div>
+
+<%= link_to 'Edit', edit_social_path(@social) %> |
+<%= link_to 'Back', socials_path %>

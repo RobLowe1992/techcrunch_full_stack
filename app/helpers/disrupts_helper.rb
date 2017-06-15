@@ -1,0 +1,2 @@
+module DisruptsHelper
+end

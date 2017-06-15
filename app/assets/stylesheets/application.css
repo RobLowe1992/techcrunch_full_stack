@@ -44,20 +44,17 @@ div.container {
     padding: 5px 15px;
 }
 .feat-pic img{
-    width: 33%;
+    max-width: 33%;
     height: 81px;
-}
-.feat-pic {
-    width: 100%;
-    font-size: 1em;
 }
 .feat-pic i {
     font-style: italic;
 }
-.feat-pic div {
+.mid-main {
     width: 100%;
-    font-size: 1.2em;
-    padding-left: 5px
+    padding-left: 4px;
+    width: 90%;
+
 }
 
 fieldset label span {
@@ -102,6 +99,13 @@ fieldset p {
     margin-left: -50px;
     font-size: 1.5em;
     font-color: #3e433e;
+}
+.headerList span {
+    color: #3e433e;
+    cursor: pointer;
+}
+.headerList i {
+    cursor: pointer;
 }
 .headerList a {
     color: #3e433e;
@@ -233,7 +237,7 @@ fieldset p {
     max-width: 50%;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
 }
 button {
@@ -263,6 +267,33 @@ header .headerList li {
     display: inline;
     margin: 10px;
 }
+
+/*#drop-down-1 {
+    display: none;
+}
+#drop-down-2 {
+    display: none;
+}*/
+header .headerList li a:active {
+
+}
+header .headerList li i:active {
+
+}
+header .headerList li a:hover {
+    text-decoration: none;
+}
+header .headerList li span:hover ~ i{
+    text-decoration: none;
+    color: #089E00;
+}
+header .headerList li i{
+    padding-left: 5px;
+}
+header .headerList li i:hover{
+    color: #089E00;
+}
+
 footer {
     margin: 40px auto 0 auto;
     text-align: center;
@@ -339,12 +370,78 @@ p.alert {
 }
 .body-stories {
     float: left;
+
+}
+.drop-down {
+    position: absolute;
+    min-width: 100px;
+    background: white;
+}
+#drop-down-1 {
+    border: 1px #aab6aa solid;
+    display: none;
+}
+#drop-down-1 a {
+    display: block;
+    font-weight: 200;
+}
+#drop-down-1 a:hover {
+    background: #089E00;
+    color: black;
+}
+#drop-down-2 {
+    border: 1px #aab6aa solid;
+    left: 147px;
+    display: none;
+}
+#drop-down-2 a {
+    display: block;
+    font-weight: 200;
+}
+#drop-down-2 a:hover {
+    background: #089E00;
+    color: black;
+}
+#drop-down-3 {
+    border: 1px #aab6aa solid;
+    left: 302px;
+    display: none;
+}
+#drop-down-3 a {
+    display: block;
+    font-weight: 200;
+}
+#drop-down-3 a:hover {
+    background: #089E00;
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+.vid-container {
+    margin: 0 auto;
+    display: inline;
+    text-align: center;
+}
+
+.vids {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
     .search-bar {
         display: none;
     }
+}
+.show-image {
+    text-align: center;
+}
+.show-text {
+    margin-top: 20px;
 }
 
 

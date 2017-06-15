@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="vid-head">Bullishes</h1>
+
+<%= @bullishes.each do | bullish |%>
+<div class="vid-container">
+    <div class="vids col-md-12">
+        <iframe id="video" width="800" src="<%= bullish.link %>" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <em class="tcGray"><%= bullish.description %></em>
+        </div>
+    </div>
+</div>
+<% end %>
+
+
+<%= link_to 'New Bullish', new_bullish_path %>

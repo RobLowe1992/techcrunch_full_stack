@@ -1,0 +1,2 @@
+module CrunchReportsHelper
+end

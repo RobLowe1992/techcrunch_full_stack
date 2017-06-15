@@ -56,3 +56,4 @@ gem 'devise', '~>4.3'
 gem "font-awesome-rails"
 gem 'httparty', '~> 0.15.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'test_dummy'

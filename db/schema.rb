@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613175536) do
+ActiveRecord::Schema.define(version: 20170615035126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "all_videos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bullishes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -23,6 +33,16 @@ ActiveRecord::Schema.define(version: 20170613175536) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "crunch_reports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "disrupts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "emails", force: :cascade do |t|
@@ -38,6 +58,11 @@ ActiveRecord::Schema.define(version: 20170613175536) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mobiles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "author"
     t.string "img_url"
@@ -47,11 +72,23 @@ ActiveRecord::Schema.define(version: 20170613175536) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "socials", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "startups", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "author"
-    t.string "body"
+    t.string "category"
+    t.text "body"
     t.string "img"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -80,6 +117,8 @@ ActiveRecord::Schema.define(version: 20170613175536) do
   create_table "videos", force: :cascade do |t|
     t.string "link"
     t.string "channel"
+    t.string "description"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

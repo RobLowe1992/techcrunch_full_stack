@@ -1,0 +1,20 @@
+<h1>Editing Startup</h1>
+
+<%= form_for @startup do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :author %>
+<%= f.text_field :author %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.label :category %>
+<%= f.text_field :category %>
+<%= f.label :img %>
+<%= f.text_field :img %>
+<%= f.label :body %>
+<%= f.text_field :body %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @startup %> |
+<%= link_to 'Back', startups_path %>

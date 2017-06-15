@@ -1,0 +1,2 @@
+module BullishesHelper
+end
