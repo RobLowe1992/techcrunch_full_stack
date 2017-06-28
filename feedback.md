@@ -18,4 +18,4 @@
 
 ## Planning / Process / Submission
 **0: Incomplete**
-> No submission received, or submission does not contain basic documentation of planning (ERD, wireframes, commit history, etc)
+> No submission received, or submission does not contain basic documentation of planning (ERD, wireframes, etc)
