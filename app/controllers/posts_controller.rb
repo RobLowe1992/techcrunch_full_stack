@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    # ActiveRecord has_many adds a model helper method so you could have @comments = @post.comments instead
     @comments = Comment.where(:post_id => params[:id])
   end
 
@@ -27,13 +28,12 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.create(post_params)
-
     redirect_to post_path(@post)
   end
 
+  # This should be handled in the comments controller
   def create_comment
     @comment = Comment.create(comment_params)
-
     redirect_to post_path(@post)
   end
 

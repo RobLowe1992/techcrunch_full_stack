@@ -15,12 +15,44 @@ ActiveRecord::Schema.define(version: 20170615035126) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "all_videos", force: :cascade do |t|
+  # The models below seem like stand-ins for other models and aren't
+
+  # the purpose of a model is to be an intermediary between the application layer (rails)
+  # and the persistence layer (the db), but rather are side-effects of generating scaffolding
+
+
+
+  create_table "all_videos", force: :cascade do |t| # you already have a table for videos in your DB
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bullishes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "crunch_reports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "disrupts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mobiles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "startups", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,16 +67,8 @@ ActiveRecord::Schema.define(version: 20170615035126) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "crunch_reports", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
-  create_table "disrupts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+  # effective way of grabbing user data without requiring signup.
   create_table "emails", force: :cascade do |t|
     t.string "email"
   end
@@ -58,10 +82,6 @@ ActiveRecord::Schema.define(version: 20170615035126) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "mobiles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "posts", force: :cascade do |t|
     t.string "author"
@@ -72,15 +92,6 @@ ActiveRecord::Schema.define(version: 20170615035126) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "socials", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "startups", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "stories", force: :cascade do |t|
     t.string "title"

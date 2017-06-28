@@ -24,8 +24,8 @@ class CrunchReportsController < ApplicationController
   # POST /crunch_reports.json
   def create
     @crunch_report = CrunchReport.new(crunch_report_params)
-
     respond_to do |format|
+      # nice conditional handling for AR method
       if @crunch_report.save
         format.html { redirect_to @crunch_report, notice: 'Crunch report was successfully created.' }
         format.json { render :show, status: :created, location: @crunch_report }
@@ -40,6 +40,7 @@ class CrunchReportsController < ApplicationController
   # PATCH/PUT /crunch_reports/1.json
   def update
     respond_to do |format|
+      # nice conditional handling for AR method
       if @crunch_report.update(crunch_report_params)
         format.html { redirect_to @crunch_report, notice: 'Crunch report was successfully updated.' }
         format.json { render :show, status: :ok, location: @crunch_report }
