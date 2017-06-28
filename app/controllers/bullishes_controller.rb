@@ -1,6 +1,4 @@
 class BullishesController < ApplicationController
-
-
   # GET /bullishes
   # GET /bullishes.json
   def index
@@ -26,7 +24,6 @@ class BullishesController < ApplicationController
   # POST /bullishes.json
   def create
     @bullish = Video.new(bullish_params)
-
   end
 
   # PATCH/PUT /bullishes/1

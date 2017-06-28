@@ -3,6 +3,9 @@
 <div class="show-image">
     <h1><%= @social.title  %></h1>
     <h2 class="tcGreen">by <%= @social.author %></h2>
+    <!-- Encountered an error when I tested create (which worked) but popped it on redirect to this view  -->
+    <!-- "The asset is not present in the asset pipeline" -->
+    <!-- https://grosser.it/2017/04/29/rails-5-1-do-not-compile-asset-in-test-vs-asset-is-not-present-in-the-asset-pipeline/ -->
     <%= image_tag @social.img, width: '700px'%>
     <p class="show-text"><%= @social.body %></p>
 

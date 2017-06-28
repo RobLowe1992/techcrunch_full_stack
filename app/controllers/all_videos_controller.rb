@@ -1,3 +1,23 @@
+# This Controller should just be VideosController. Conceptually, "all videos" is
+# really just index in a controller for videos.
+
+# scaffolding generated a ton of extra unused code/files in your application
+
+# Rather than having several controllers for videos, you should have a just videos controller.
+# You can leverage Video's channel field/property (really it's an AR getter/setter method)
+# to differentiate your videos
+
+# To filter the list, honestly, I'd probably use javascript for this, hide and show videos
+# based on a clickable list of categories, where each clickable category had a click-listener on it
+# triggering a function that woulder filter based on the clicked category.
+# Each Video displayed in your view could have a custom HTML attribute like `data-category`
+# that you could use target the relevant elements 
+# That's the leanest, DRY-est way I can think of, and wouldn't involve a page refresh
+
+# You could also have multiple index view-methods such bullishes_index,
+# crunch_reports_index, disrupts_index, though this would be repetitive
+# and your views for each seem similar if not identical
+
 class AllVideosController < ApplicationController
   before_action :set_all_video, only: [:show, :edit, :update, :destroy]
 
@@ -27,7 +47,6 @@ class AllVideosController < ApplicationController
   # POST /all_videos.json
   def create
     @video = Video.create(all_video_params)
-
     redirect_to all_videos_path
   end
 
@@ -49,7 +68,6 @@ class AllVideosController < ApplicationController
   # DELETE /all_videos/1.json
   def destroy
     @all_video.destroy
-
   end
 
   private
