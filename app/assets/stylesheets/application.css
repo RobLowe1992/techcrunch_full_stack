@@ -100,22 +100,22 @@ fieldset p {
     border-left: none;
     border-width: 1px;
 }
-.headerList {
+.header-list {
     margin-left: -50px;
     font-size: 1.5em;
     font-color: #3e433e;
 }
-.headerList span {
+.header-list span {
     color: #3e433e;
     cursor: pointer;
 }
-.headerList i {
+.header-list i {
     cursor: pointer;
 }
-.headerList a {
+.header-list a {
     color: #3e433e;
 }
-.headerList li a:hover {
+.header-list li a:hover {
     color: #089E00;
 }
 .headerLogo {
@@ -154,7 +154,6 @@ fieldset p {
 #left-main {
     margin-top:15px;
     padding-right: 0;
-    width: 66%;
     float: left;
 }
 .margin-10 {
@@ -169,7 +168,6 @@ fieldset p {
     padding-top: 5px;
     padding-left: 0;
     margin-top: 13px;
-    width: 34%;
     float: right;
 }
 #mid-main h2 {
@@ -183,8 +181,8 @@ fieldset p {
  }
  #news-text {
     font-size: 18px;
-    width: 292px;
-    height: 49px;
+    width: 100%;
+    min-height: 49px;
     text-align: center;
     padding-top: 12px;
     margin-bottom: 0;
@@ -204,7 +202,7 @@ fieldset p {
     height: 41px;
 }
 .sidebar-dimensions {
-    width: 292px;
+    width: 100%;
     height: 77px;
     border-style: solid;
     border-width: 1px;
@@ -247,6 +245,7 @@ fieldset p {
 body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
+    text-align: -webkit-center;
 }
 button {
     font-style: normal;
@@ -271,7 +270,7 @@ button {
 em {
     font-size: 1.2em
 }
-header .headerList li {
+header .header-list li {
     display: inline;
     margin: 10px;
 }
@@ -282,23 +281,23 @@ header .headerList li {
 #drop-down-2 {
     display: none;
 }*/
-header .headerList li a:active {
+header .header-list li a:active {
 
 }
-header .headerList li i:active {
+header .header-list li i:active {
 
 }
-header .headerList li a:hover {
+header .header-list li a:hover {
     text-decoration: none;
 }
-header .headerList li span:hover ~ i{
+header .header-list li span:hover ~ i{
     text-decoration: none;
     color: #089E00;
 }
-header .headerList li i{
+header .header-list li i{
     padding-left: 5px;
 }
-header .headerList li i:hover{
+header .header-list li i:hover{
     color: #089E00;
 }
 
@@ -439,12 +438,6 @@ p.alert {
     padding: 20px;
     margin: 20px;
 }
-
-@media only screen and (max-width: 1200px) {
-    .search-bar {
-        display: none;
-    }
-}
 .show-image {
     text-align: center;
 }
@@ -459,4 +452,17 @@ p.alert {
     height: 500px;
 }
 
+@media only screen and (max-width: 1199px) {
+    .search-bar {
+        display: none;
+    }
+    .sidebar-input, .sidebar-submit {
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .right-main {
+        display: none;
+    }
+}
 

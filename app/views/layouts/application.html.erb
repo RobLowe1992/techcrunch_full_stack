@@ -8,267 +8,341 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
-  <body>
-    <div class="container">
-        <div class="row">
-            <header>
-                <div>
-                    <a class="col-md-2" href="<%= root_path %>">
-                        <%= image_tag "logo.svg" %>
+  <body class="container-fluid">
+    <header class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                    <a href="<%= root_path %>">
+                        <%= image_tag "logo.svg", class: 'logo' %>
                     </a>
-                    <div class="col-md-10" style="display: block;">
-                        <div class="height-50" style="margin-bottom: 25px;">
-                            <div class="socialList width-50 fontEM tcGray">
-                                <ul id="header-social">Follow Us
-                                    <li>
-                                        <%= link_to '', 'https://www.facebook.com/techcrunch', :class => 'fa fa-facebook' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://www.instagram.com/techcrunch/', :class => 'fa fa-instagram' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://twitter.com/techcrunch', :class => 'fa fa-twitter' %>
-                                    </li>
-                                    <%=  %>
-                                    <li>
-                                        <%= link_to '', 'https://www.youtube.com/user/techcrunch', :class => 'fa fa-youtube' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://www.pinterest.com/techcrunch/', :class => 'fa fa-pinterest' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://www.linkedin.com/company/techcrunch', :class => 'fa fa-linkedin' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://plus.google.com/+TechCrunch', :class => 'fa fa-google-plus' %>
-                                    </li>
-                                    <li>
-                                        <%= link_to '', 'https://techcrunch.com/rssfeeds/', :class => 'fa fa-rss' %>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="width-50">
-                                <a href="https://techcrunch.com/got-a-tip/">
-                                    <span class="tcGray fontEM">Got a tip?</span>
-                                    <span class="tcGreen fontEM"> Let us know.</span>
-                                </a>
+                </div>
+                <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10" style="display: block;">
+                    <div class="height-50 row">
+                        <div class="width-50 col-xs-12 col-sm-6 col-md-6 col-lg-12 tip">
+                            <a href="https://techcrunch.com/got-a-tip/">
+                                <span class="tcGray fontEM">Got a tip?</span>
+                                <span class="tcGreen fontEM"> Let us know.</span>
+                            </a>
+                        </div>
+                        <div class="socialList width-50 fontEM tcGray col-xs-12 col-sm-6 col-md-6 col-lg-6 socials">
+                            <ul id="header-social">Follow Us
+                                <li>
+                                    <%= link_to '', 'https://www.facebook.com/techcrunch', :class => 'fa fa-facebook' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://www.instagram.com/techcrunch/', :class => 'fa fa-instagram' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://twitter.com/techcrunch', :class => 'fa fa-twitter' %>
+                                </li>
+                                <%=  %>
+                                <li>
+                                    <%= link_to '', 'https://www.youtube.com/user/techcrunch', :class => 'fa fa-youtube' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://www.pinterest.com/techcrunch/', :class => 'fa fa-pinterest' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://www.linkedin.com/company/techcrunch', :class => 'fa fa-linkedin' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://plus.google.com/+TechCrunch', :class => 'fa fa-google-plus' %>
+                                </li>
+                                <li>
+                                    <%= link_to '', 'https://techcrunch.com/rssfeeds/', :class => 'fa fa-rss' %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="height-50 row">
+                        <div class="width-50 col-xs-6 col-sm-6 col-md-6 col-lg-6 drops">
+                            <div class="row">
+                                <div class="dropdown col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News<span class="caret"></span></button>
+                                    <ul class="header-list dropdown-menu">
+                                        <li>
+                                            <%= link_to 'Mobile', mobiles_path %>
+                                        </li>
+                                        <li>
+                                            <%= link_to 'Social', socials_path %>
+                                        </li>
+                                        <li>
+                                            <%= link_to 'Startup', startups_path %>
+                                        </li>
+                                        <li>
+                                            <%= link_to 'Posts', posts_path %>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Videos<span class="caret"></span></button>
+                                    <ul class="header-list dropdown-menu">
+                                        <li>
+                                            <%= link_to 'Bullish', bullishes_path %>
+                                        </li>
+                                        <li>
+                                            <%= link_to 'Crunch Report', crunch_reports_path %>
+                                        </li>
+                                        <li>
+                                            <%= link_to 'Disrupt 2017', disrupts_path  %>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <% if !current_user %>
+                                    <%= link_to "Sign Up", new_user_registration_path, :class => 'log-in' %>
+                                    <%= link_to "Sign In", new_user_session_path, :class => 'log-in' %>
+                                <% else %>
+                                    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'log-in' %>
+                                <% end %>
+                                </div>
                             </div>
                         </div>
-                        <div class="height-50">
-                            <div class="width-50 search-bar" style="float: right;">
-                                <button class="message-us" style="width: 140px">Message Us</button>
-                                <input type="input" name="search" placeholder="Search" class="fontEM" style="width: 252px">
-                            </div>
-                            <div class="width-50">
-                                <ul class="headerList">
-                                    <div>
-                                   <li>
-                            <%= link_to 'News', root_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Mobile', mobiles_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Social', socials_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Startup', startups_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Posts', posts_path %>
-                        </li>
-                        </div>
-                        <li>
-                            <%= link_to 'Videos', all_videos_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Bullish', bullishes_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Crunch Report', crunch_reports_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Disrupt 2017', disrupts_path  %>
-                        </li>
-                        <li>
-                                        <% if !current_user %>
-                                            <%= link_to "Sign Up", new_user_registration_path, :class => 'log-in' %>
-                                            <%= link_to "Sign In", new_user_session_path, :class => 'log-in' %>
-                                        <% else %>
-                                            <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'log-in' %>
-                                        <% end %>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="width-50 search-bar col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <button class="message-us" style="width: 140px">Message Us</button>
+                            <input type="input" name="search" placeholder="Search" class="fontEM" style="width: 252px">
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
-        <div id="note-bar" class="row bg-green">
-                <p>
-                    <span id="nb1" class="fontEM"></span>
-                    <span id="nb2"></span>
-                    <span id="nb3" class="fontEM"></span>
-                </p>
-        </div>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-    <%= yield %>
+    </header>
+    <div id="note-bar" class="row bg-green">
+            <p>
+                <span id="nb1" class="fontEM"></span>
+                <span id="nb2"></span>
+                <span id="nb3" class="fontEM"></span>
+            </p>
     </div>
-        <footer class="dark-grey">
-            <div class="row">
-            <a href="https://techcrunch.com/" style="float: left; clear: all; margin-left: 15px">
-                <%= image_tag 'logoSmall.jpg', :id => 'footerLogo' %>
-            </a>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <h3 class="white-text text-left">Crunch Network</h3>
-                    <ul class="fontEM3 text-left">
-                        <li>
-                            <%= link_to 'News', root_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Video', all_videos_path %>
-                        </li>
-                        <li>
-                            <%= link_to 'Crunchbase', 'http://www.crunchbase.com/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'TechCrunch Store', 'http://techcrunchstore.com/' %>
-                        </li>
-                    </ul>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <main class="row">
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <%= yield %>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 right-main">
+                <div class="sidebar-head">
+                    <a href="https://techcrunch.com/got-a-tip/">Have a tip, pitch, or guest column? <span class="tcGreen">Send us a tip.</span></a>
                 </div>
-                <div class="col-md-4">
-                    <h3 class="white-text text-left">About</h3>
-                    <ul class="fontEM3 text-left">
-                        <li>
-                            <%= link_to 'Staff', 'https://techcrunch.com/about/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Contact Us', 'https://techcrunch.com/contact/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Advertise With Us', 'https://techcrunch.com/advertise/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Event and Editorial Calender', 'https://techcrunch.com/advertisement-events-calendar/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Send Us A Tip', 'https://techcrunch.com/got-a-tip/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Activations Blog', 'https://techcrunch.com/advertisement-events-calendar/#activations-blog' %>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3 class="white-text text-left">International</h3>
-                    <ul class="fontEM3 text-left">
-                        <li>
-                            <%= link_to 'China', 'http://techcrunch.cn/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Europe', 'https://techcrunch.com/europe/' %>
-                        </li>
-                        <li>
-                            <%= link_to 'Japan', 'http://jp.techcrunch.com/' %>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <h3 class="tcGray text-left">Follow TechCrunch</h3>
-                    <div>
-                        <ul class="list-style inlineList text-left">
-                            <li>
-                                <%= link_to '', 'https://www.facebook.com/techcrunch', :class => 'fa fa-facebook' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://twitter.com/techcrunch', :class => 'fa fa-twitter' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://plus.google.com/+TechCrunch', :class => 'fa fa-google-plus' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://www.linkedin.com/company/techcrunch', :class => 'fa fa-linkedin' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://www.youtube.com/user/techcrunch', :class => 'fa fa-youtube' %>
-                            </li>
-                        </ul>
+                <div class="sidebar-content">
+                    <p id="news-text" class="bg-green white-text news-text">NEWSLETTER SUBSCRIPTIONS</p>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>The Daily Crunch</span>
+                            </label>
+                            <p class="tcGray">Get the top tech stories of the day delivered to your inbox</p>
+                        </fieldset>
                     </div>
-                    <div>
-                        <ul class="list-style inlineList text-left">
-                            <li>
-                                <%= link_to '', 'https://www.pinterest.com/techcrunch/', :class => 'fa fa-pinterest' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'http://techcrunch.tumblr.com/', :class => 'fa fa-tumblr fa-lg'%>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://www.instagram.com/techcrunch/', :class => 'fa fa-instagram' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'http://www.stumbleupon.com/channel/techcrunch/', :class => 'fa fa-stumbleupon fa-lg' %>
-                            </li>
-                            <li>
-                                <%= link_to '', 'https://techcrunch.com/rssfeeds/', :class => 'fa fa-rss' %>
-                            </li>
-                        </ul>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>TC Weekly Roundup</span>
+                            </label>
+                            <p class="tcGray">Get a weekly recap of the biggest tech stories</p>
+                        </fieldset>
+                    </div>
+                    <div class="sidebar-dimensions">
+                        <fieldset>
+                            <label>
+                                <span>
+                                    <input type="checkbox" name="The Daily Crunch" id="daily-crunch">
+                                </span>
+                                <span>Crunchbase Daily</span>
+                            </label>
+                            <p class="tcGray">The latest startup funding announcements</p>
+                        </fieldset>
+                    </div>
+                    <div id="sidebar-subs" class="sidebar-subs">
+                        <%= form_for @email, url: home_index_path, method: :post do |f| %>
+                            <%= f.text_field :email, placeholder: 'Enter Email Address', class: 'tcGray sidebar-input', id: 'sidebar-input'  %>
+                            <%= f.submit id: 'sidebar-input', value: 'SUBSCRIBE', class: 'inline sidebar-submit' %>
+                        <% end %>
+                    </div>
+                    <div class="text-center">
+                        <a href="http://link.techcrunch.com/join/134/signup-all-newsletters&hash=e2426df9e6d563a11dc2f37bff61e253" id="newsletter">SEE ALL NEWSLETTERS
+                            <i class="green-arrow fa fa-angle-right" aria-hidden="true"></i>
+                            <i class="green-arrow fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-4 text-left">
-                    <h3 class="tcGray">TechCrunch Apps</h3>
-                    <ul class="inlineList list-style">
-                        <li>
-                            <%= link_to '', 'https://itunes.apple.com/us/app/techcrunch/id526058642?mt=8', :class => 'fa fa-apple fa-lg' %>
-                        </li>
-                        <li>
-                            <%= link_to '', 'https://play.google.com/store/apps/details?id=com.aol.mobile.techcrunch', :class => 'fa fa-android fa-lg' %>
-                        </li>
-                        <li>
-                            <%= link_to '', 'https://www.microsoft.com/en-us/store/p/techcrunch-the-inside-story-on-innovation/9wzdncrfj9t3', :class => 'fa fa-windows fa-lg' %>
-                        </li>
-                    </ul>
+                <div id="sidebar-shop" class="sidebar-shop">
+                    <a href="https://techcrunchstore.com/">
+                        <p>Want some TechCrunch gear? <span class="tcGreen">Shop here.</span></p>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <h3 class="tcGray text-left">Subscribe to The Daily Crunch</h3>
-                    <p class="white-text text-left" style="font-size: 1.2em">Latest headlines delivered to you daily</p>
-                    <div>
-                    </div>
+                <div id="crunchboard">
+                    <h3 class="dark-grey-text">CrunchBoard</h3>
+                    <h4>Job Listings</h4>
+                    <% @listings.each do | listing | %>
+                        <div>
+                            <a href="<%= listing.url %>"><%= listing.listing %> (<%= listing.location %>)</a>
+                        </div>
+                    <% end %>
                 </div>
             </div>
-            <div>
-                <ul class="tcGray inlineList">
-                    <li>© 2013-2017 AOL Inc. All rights reserved.</li>
+    </main>
+    <footer class="dark-grey">
+        <div class="row">
+        <a href="https://techcrunch.com/" style="float: left; clear: all; margin-left: 15px">
+            <%= image_tag 'logoSmall.jpg', :id => 'footerLogo' %>
+        </a>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="white-text text-left">Crunch Network</h3>
+                <ul class="fontEM3 text-left">
                     <li>
-                        <%= link_to 'Privacy Policy', 'http://privacy.aol.com/' %>
+                        <%= link_to 'News', root_path %>
                     </li>
                     <li>
-                        <%= link_to 'About Our Ads', 'http://adinfo.aol.com/about-our-ads' %>
+                        <%= link_to 'Video', all_videos_path %>
                     </li>
                     <li>
-                        <%= link_to 'Anti Harassment Policy', 'https://techcrunch.com/anti-harassment-policy/' %>
+                        <%= link_to 'Crunchbase', 'http://www.crunchbase.com/' %>
                     </li>
                     <li>
-                        <%= link_to 'Terms of Service', 'http://legal.aol.com/TOS/' %>
-                    </li>
-                    <li>Powered by
-                        <%= link_to 'WordPress.com VIP', 'https://vip.wordpress.com/?utm_source=vip_powered_wpcom&utm_medium=web&utm_campaign=VIP%20Footer%20Credit' %>
-                    </li>
-                    <li>Fonts by
-                        <%= link_to 'Webtype', 'http://www.webtype.com/' %>
+                        <%= link_to 'TechCrunch Store', 'http://techcrunchstore.com/' %>
                     </li>
                 </ul>
             </div>
-        </footer>
+            <div class="col-md-4">
+                <h3 class="white-text text-left">About</h3>
+                <ul class="fontEM3 text-left">
+                    <li>
+                        <%= link_to 'Staff', 'https://techcrunch.com/about/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Contact Us', 'https://techcrunch.com/contact/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Advertise With Us', 'https://techcrunch.com/advertise/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Event and Editorial Calender', 'https://techcrunch.com/advertisement-events-calendar/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Send Us A Tip', 'https://techcrunch.com/got-a-tip/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Activations Blog', 'https://techcrunch.com/advertisement-events-calendar/#activations-blog' %>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="white-text text-left">International</h3>
+                <ul class="fontEM3 text-left">
+                    <li>
+                        <%= link_to 'China', 'http://techcrunch.cn/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Europe', 'https://techcrunch.com/europe/' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Japan', 'http://jp.techcrunch.com/' %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="tcGray text-left">Follow TechCrunch</h3>
+                <div>
+                    <ul class="list-style inlineList text-left">
+                        <li>
+                            <%= link_to '', 'https://www.facebook.com/techcrunch', :class => 'fa fa-facebook' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://twitter.com/techcrunch', :class => 'fa fa-twitter' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://plus.google.com/+TechCrunch', :class => 'fa fa-google-plus' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://www.linkedin.com/company/techcrunch', :class => 'fa fa-linkedin' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://www.youtube.com/user/techcrunch', :class => 'fa fa-youtube' %>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-style inlineList text-left">
+                        <li>
+                            <%= link_to '', 'https://www.pinterest.com/techcrunch/', :class => 'fa fa-pinterest' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'http://techcrunch.tumblr.com/', :class => 'fa fa-tumblr fa-lg'%>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://www.instagram.com/techcrunch/', :class => 'fa fa-instagram' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'http://www.stumbleupon.com/channel/techcrunch/', :class => 'fa fa-stumbleupon fa-lg' %>
+                        </li>
+                        <li>
+                            <%= link_to '', 'https://techcrunch.com/rssfeeds/', :class => 'fa fa-rss' %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 text-left">
+                <h3 class="tcGray">TechCrunch Apps</h3>
+                <ul class="inlineList list-style">
+                    <li>
+                        <%= link_to '', 'https://itunes.apple.com/us/app/techcrunch/id526058642?mt=8', :class => 'fa fa-apple fa-lg' %>
+                    </li>
+                    <li>
+                        <%= link_to '', 'https://play.google.com/store/apps/details?id=com.aol.mobile.techcrunch', :class => 'fa fa-android fa-lg' %>
+                    </li>
+                    <li>
+                        <%= link_to '', 'https://www.microsoft.com/en-us/store/p/techcrunch-the-inside-story-on-innovation/9wzdncrfj9t3', :class => 'fa fa-windows fa-lg' %>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="tcGray text-left">Subscribe to The Daily Crunch</h3>
+                <p class="white-text text-left" style="font-size: 1.2em">Latest headlines delivered to you daily</p>
+                <div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul class="tcGray inlineList">
+                <li>© 2013-2017 AOL Inc. All rights reserved.</li>
+                <li>
+                    <%= link_to 'Privacy Policy', 'http://privacy.aol.com/' %>
+                </li>
+                <li>
+                    <%= link_to 'About Our Ads', 'http://adinfo.aol.com/about-our-ads' %>
+                </li>
+                <li>
+                    <%= link_to 'Anti Harassment Policy', 'https://techcrunch.com/anti-harassment-policy/' %>
+                </li>
+                <li>
+                    <%= link_to 'Terms of Service', 'http://legal.aol.com/TOS/' %>
+                </li>
+                <li>Powered by
+                    <%= link_to 'WordPress.com VIP', 'https://vip.wordpress.com/?utm_source=vip_powered_wpcom&utm_medium=web&utm_campaign=VIP%20Footer%20Credit' %>
+                </li>
+                <li>Fonts by
+                    <%= link_to 'Webtype', 'http://www.webtype.com/' %>
+                </li>
+            </ul>
+        </div>
+    </footer>
  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script src="https://use.fontawesome.com/1bc86196f7.js"></script>
   </body>
