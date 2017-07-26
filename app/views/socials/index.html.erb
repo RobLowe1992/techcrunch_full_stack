@@ -1,38 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row main" id="main">
-            <div class="col-md-12">
-                <div id="left-main" class="left-main">
-                  <h4>How technology is shaping the way we live with each other</h4>
-                  <div class="left-main-img">
-                      <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @socials.first.img %>">
-                      <div class="img-info">
-                        <h3><%= @socials.first.title %></h3>
-                        <div class="left-main-author">by <%= @socials.first.author %></div>
-                      </div>
-                  </div>
-                </div>
-                <div id="mid-main" class="mid-main mid-main-categories">
-                </div>
-                <div id="body-stories" class="body-stories">
-                <% @socials.each do | social | %>
-                  <div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;">
-                    <a href="<% social_path(social) %>">
-                      <img src="<%= social.img %>" align="right" style="width: 210px; height: 158px; padding:15px">
-                    </a>
-                    <a class="dark-grey-font" style="color: #282e28" href="<%= social_path(social) %>">
-                      <h2 class="dark-grey-font"><%= social.title %></h2>
-                    </a>
-                    <h4>
-                      <em class="tcGray">by </em>
-                      <em class="tcGreen"><%= social.author %></em>
-                    </h4>
-                    <p class="article-paragraph"><%= social.description %><a class="tcGreen" href="<%= social_path(social) %>">Read More</a></p>
-                  </div>
-                <% end %>
-                </div>
+    <div id="left-main" class="left-main col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <h4>How technology is shaping the way we live with each other</h4>
+        <div class="left-main-img">
+            <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @socials.first.img %>">
+            <div class="img-info">
+                <h3><%= @socials.first.title %></h3>
+                <div class="left-main-author">by <%= @socials.first.author %></div>
             </div>
         </div>
+    </div>
+    <div id="mid-main" class="mid-main mid-main-categories col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    </div>
+    <div class="row">
+        <div id="body-stories" class="body-stories col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <% @socials.each do | social | %>
+          <div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;">
+            <a href="<% social_path(social) %>">
+              <img src="<%= social.img %>" align="right" style="width: 210px; height: 158px; padding:15px">
+            </a>
+            <a class="dark-grey-font" style="color: #282e28" href="<%= social_path(social) %>">
+              <h2 class="dark-grey-font"><%= social.title %></h2>
+            </a>
+            <h4>
+              <em class="tcGray">by </em>
+              <em class="tcGreen"><%= social.author %></em>
+            </h4>
+            <p class="article-paragraph"><%= social.description %><a class="tcGreen" href="<%= social_path(social) %>">Read More</a></p>
+          </div>
+        <% end %>
+        </div>
+    </div>
+</div>
 <br>
 
 <%= link_to 'New Social', new_social_path %>

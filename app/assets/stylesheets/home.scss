@@ -13,11 +13,18 @@
     .left-main {
         position: relative;
         left: -15px;
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 35px;
+            height: 0;
+            overflow: hidden;
+        }
     }
 
     .mid-main {
         position: relative;
-        left: 40px;
 
         .ft-stories {
             border-bottom: 1px solid #eee;
@@ -121,6 +128,7 @@ header {
     }
     .search-bar  {
         text-align: right;
+        float: right;
     }
     .header-list {
         position: relative;

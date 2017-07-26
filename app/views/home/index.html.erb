@@ -3,7 +3,9 @@
                 <div id="left-main" class="left-main col-xs-8 col-sm-8 col-md-8 col-lg-8">
                     <p class="dark-grey-text-upper">Watch <i id="green-bigger" class="tcGreen"><%= @video.channel %></i></p>
                     <div>
-                        <iframe id="video" width="100%" height="315" src="<%= @video.link %>" frameborder="0" allowfullscreen></iframe>
+                        <div class="video-container">
+                            <iframe id="video" src="<%= @video.link %>" frameborder="0" allowfullscreen></iframe>
+                        </div>
                         <div>
                             <em class="tcGray"><%= @video.description %></em>
                         </div>

@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
         <div class="row main" id="main">
-            <div class="col-md-12">
-                <div id="left-main" class="left-main">
-                  <h4>The apps, platforms and businesses redefining how we use computers</h4>
-                  <div class="left-main-img">
-                      <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @mobiles.first.img %>">
-                      <div class="img-info">
-                        <h3><%= @mobiles.first.title %></h3>
-                        <div class="left-main-author">by <%= @mobiles.first.author %></div>
-                      </div>
+            <div id="left-main" class="left-main col-xs-8 col-sm-8 col-md-8 col-lg-8">
+              <h4>The apps, platforms and businesses redefining how we use computers</h4>
+              <div class="left-main-img">
+                  <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @mobiles.first.img %>">
+                  <div class="img-info">
+                    <h3><%= @mobiles.first.title %></h3>
+                    <div class="left-main-author">by <%= @mobiles.first.author %></div>
                   </div>
-                </div>
-                <div id="mid-main" class="mid-main mid-main-categories">
-                </div>
-                <div id="body-stories" class="body-stories">
+              </div>
+            </div>
+            <div id="mid-main" class="mid-main mid-main-categories col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            </div>
+            <div class="row">
+                <div id="body-stories" class="body-stories col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <% @mobiles.each do | mobile | %>
                   <div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;">
                     <a href="<% mobile_path(mobile) %>">

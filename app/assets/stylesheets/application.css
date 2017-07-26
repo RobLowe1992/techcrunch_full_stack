@@ -21,7 +21,9 @@ a {
 .article-left {
     width: 75%;
 }
-
+.article-entry {
+    text-align: left;
+}
 .article-entry img{
     position: relative;
     top: -20px;
@@ -451,17 +453,32 @@ p.alert {
     width: 500px;
     height: 500px;
 }
+button.dropdown-toggle {
+    font-size: 1.4em;
+    border: none;
+}
 
 @media only screen and (max-width: 1199px) {
-    .search-bar {
-        display: none;
-    }
     .sidebar-input, .sidebar-submit {
         width: 100% !important;
     }
 }
+@media only screen and (max-width: 1118px) {
+    .message-us {
+        display: none;
+    }
+}
 @media only screen and (max-width: 991px) {
     .right-main {
+        display: none;
+    }
+    .socialList {
+        display: none;
+    }
+    .message-us {
+        display: none;
+    }
+    .tip {
         display: none;
     }
 }

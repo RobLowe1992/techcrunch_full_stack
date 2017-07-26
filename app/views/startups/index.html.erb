@@ -2,34 +2,38 @@
 
 <div class="row main" id="main">
             <div class="col-md-12">
-                <div id="left-main" class="left-main">
-                  <h4>The newest companies that could change the world</h4>
-                  <div class="left-main-img">
-                      <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @startups.first.img %>">
-                      <div class="img-info">
-                        <h3><%= @startups.first.title %></h3>
-                        <div class="left-main-author">by <%= @startups.first.author %></div>
+                <div class="row">
+                    <div id="left-main" class="left-main col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                      <h4>The newest companies that could change the world</h4>
+                      <div class="left-main-img">
+                          <img class="thumb" data-aspect-ratio="500x369" height="369" width="100%" alt="#" src="<%= @startups.first.img %>">
+                          <div class="img-info">
+                            <h3><%= @startups.first.title %></h3>
+                            <div class="left-main-author">by <%= @startups.first.author %></div>
+                          </div>
                       </div>
-                  </div>
+                    </div>
+                    <div id="mid-main" class="mid-main mid-main-categories col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    </div>
                 </div>
-                <div id="mid-main" class="mid-main mid-main-categories">
-                </div>
-                <div id="body-stories" class="body-stories">
-                <% @startups.each do | startup | %>
-                  <div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;">
-                    <a href="<% startup_path(startup) %>">
-                      <img src="<%= startup.img %>" align="right" style="width: 210px; height: 158px; padding:15px">
-                    </a>
-                    <a class="dark-grey-font" style="color: #282e28" href="<%= startup_path(startup) %>">
-                      <h2 class="dark-grey-font"><%= startup.title %></h2>
-                    </a>
-                    <h4>
-                      <em class="tcGray">by </em>
-                      <em class="tcGreen"><%= startup.author %></em>
-                    </h4>
-                    <p class="article-paragraph"><%= startup.description %><a class="tcGreen" href="#">Read More</a></p>
-                  </div>
-                <% end %>
+                <div class="row">
+                    <div id="body-stories" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 body-stories">
+                    <% @startups.each do | startup | %>
+                      <div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;">
+                        <a href="<% startup_path(startup) %>">
+                          <img src="<%= startup.img %>" align="right" style="width: 210px; height: 158px; padding:15px">
+                        </a>
+                        <a class="dark-grey-font" style="color: #282e28" href="<%= startup_path(startup) %>">
+                          <h2 class="dark-grey-font"><%= startup.title %></h2>
+                        </a>
+                        <h4>
+                          <em class="tcGray">by </em>
+                          <em class="tcGreen"><%= startup.author %></em>
+                        </h4>
+                        <p class="article-paragraph"><%= startup.description %><a class="tcGreen" href="#">Read More</a></p>
+                      </div>
+                    <% end %>
+                    </div>
                 </div>
             </div>
         </div>
