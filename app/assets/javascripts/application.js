@@ -193,7 +193,7 @@ $(function() {
         latest = data;
 
         for (var i = 0; i < 10; i++) {
-            $('#body-stories-n').append(`<div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;"><a href="${data.articles[i].url}"><img src="${data.articles[i].urlToImage}" align="right" style="width: 210px; height: 158px; padding:15px"></a><a class="dark-grey-font" style="color: #282e28" href="${data.articles[i].url}"><h2 class="dark-grey-font">${data.articles[i].title}</h2></a><h4><em class="tcGray">by </em><em class="tcGreen">${data.articles[i].author}</em></h4><p class="article-paragraph">${data.articles[i].description}<a class="tcGreen" href="${data.articles[i].url}">Read More</a></p></div>`);
+            $('#body-stories-n').append('<div class="article-entry" style="border-bottom: solid; border-color: #282e28; border-width: 1px; margin-bottom: 10px;"><a href="${data.articles[i].url}"><img src="${data.articles[i].urlToImage}" align="right" style="width: 210px; height: 158px; padding:15px"></a><a class="dark-grey-font" style="color: #282e28" href="${data.articles[i].url}"><h2 class="dark-grey-font">${data.articles[i].title}</h2></a><h4><em class="tcGray">by </em><em class="tcGreen">${data.articles[i].author}</em></h4><p class="article-paragraph">${data.articles[i].description}<a class="tcGreen" href="${data.articles[i].url}">Read More</a></p></div>');
         }
     });
 
@@ -204,7 +204,7 @@ $(function() {
         featured = data;
 
         for (var i = 0; i < 4; i++) {
-        $('#mid-main').append(`<div class="mid-main-divs" id='mid-main-${i}'><a href="${data.articles[i].url}"><img src="${data.articles[i].urlToImage}" style="width: 33%; float: left;" src="${data.articles[i].urlToImage}"><div style="float: right; width: 67%;"><span style="color: black; height: 50%">${data.articles[i].title}<br></span><i style="height: 50%; float: right">by ${data.articles[i].author}</i></div></a></div>`);
+        $('#mid-main').append('<div class="mid-main-divs" id="mid-main-${i}""><a href="${data.articles[i].url}"><img src="${data.articles[i].urlToImage}" style="width: 33%; float: left;" src="${data.articles[i].urlToImage}"><div style="float: right; width: 67%;"><span style="color: black; height: 50%">${data.articles[i].title}<br></span><i style="height: 50%; float: right">by ${data.articles[i].author}</i></div></a></div>');
         }
     });
 });
