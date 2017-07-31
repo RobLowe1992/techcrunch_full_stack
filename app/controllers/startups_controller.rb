@@ -20,6 +20,7 @@ class StartupsController < ApplicationController
 
   # GET /startups/1/edit
   def edit
+    @startup = Story.find(params[:id])
   end
 
   # POST /startups

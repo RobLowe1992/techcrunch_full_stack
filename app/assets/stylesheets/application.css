@@ -158,6 +158,9 @@ fieldset p {
     padding-right: 0;
     float: left;
 }
+.edit_story {
+    display: grid
+}
 .margin-10 {
     margin: 10px 0;
 }

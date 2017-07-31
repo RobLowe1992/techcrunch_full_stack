@@ -23,6 +23,7 @@ class SocialsController < ApplicationController
 
   # GET /socials/1/edit
   def edit
+    @social = Story.find(params[:id])
   end
 
   # POST /socials
