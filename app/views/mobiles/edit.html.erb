@@ -1,18 +1,31 @@
 <h1>Edit Mobile</h1>
 
 <%= form_for @mobile, :url => url_for(:controller => 'mobiles', :action => 'update') do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.label :author %>
-<%= f.text_field :author %>
-<%= f.label :category %>
-<%= f.text_field :category %>
-<%= f.label :img_url %>
-<%= f.text_field :img %>
-<%= f.label :description %>
-<%= f.text_area :description, size: "40x4" %>
-<%= f.label :body %>
-<%= f.text_area :body, size: "40x10" %>
+<div class="inherit">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+</div>
+<div class="inherit">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+</div>
+<div class="inherit">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+</div>
+<div class="inherit">
+    <%= f.label :img_url %>
+    <%= f.text_field :img %>
+</div>
+<div class="inherit">
+    <%= f.label :description %>
+    <%= f.text_area :description, size: "40x4" %>
+</div>
+<div class="inherit">
+    <%= f.label :body %>
+    <%= f.text_area :body, size: "40x10" %>
+</div>
+
 <%= f.submit %>
 <% end %>
 

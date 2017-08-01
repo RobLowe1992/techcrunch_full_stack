@@ -226,6 +226,9 @@ fieldset p {
 .tcGray {
     color: #a5a5a5;
 }
+.inherit {
+    display: inherit;
+}
 .list-style li{
     display: inline;
     font-color: white;
