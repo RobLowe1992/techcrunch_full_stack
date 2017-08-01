@@ -35,8 +35,9 @@ class StartupsController < ApplicationController
   # PATCH/PUT /startups/1.json
   def update
     respond_to do |format|
+      @startup = Story.find(params[:id])
       if @startup.update(startup_params)
-        format.html { redirect_to @startup, notice: 'Startup was successfully updated.' }
+        format.html { redirect_to startup_path(@startup), notice: 'Startup was successfully updated.' }
         format.json { render :show, status: :ok, location: @startup }
       else
         format.html { render :edit }

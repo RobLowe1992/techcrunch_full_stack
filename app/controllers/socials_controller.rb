@@ -37,9 +37,10 @@ class SocialsController < ApplicationController
   # PATCH/PUT /socials/1
   # PATCH/PUT /socials/1.json
   def update
+    @social = Story.find(params[:id])
     respond_to do |format|
       if @social.update(social_params)
-        format.html { redirect_to @social, notice: 'Social was successfully updated.' }
+        format.html { redirect_to social_path(@social), notice: 'Social was successfully updated.' }
         format.json { render :show, status: :ok, location: @social }
       else
         format.html { render :edit }

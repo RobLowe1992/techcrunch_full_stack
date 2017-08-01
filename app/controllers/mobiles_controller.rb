@@ -39,9 +39,15 @@ class MobilesController < ApplicationController
   # PATCH/PUT /mobiles/1.json
   def update
     @mobile = Story.find(params[:id])
-    @mobile.update(mobile_params)
-
-    redirect_to mobile_path(@mobile)
+    respond_to do |format|
+      if @mobile.update(mobile_params)
+        format.html { redirect_to mobile_path(@mobile), notice: 'Mobile was successfully updated.' }
+        format.json { render :show, status: :ok, location: @mobile }
+      else
+        format.html { render :edit }
+        format.json { render json: @mobile.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # DELETE /mobiles/1
